@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  json:
+    image: masumonline/arm64-jsonserver:latest
+    ports:
+      - "8080:3000"
+    volumes:
+      - ./src:/data
+    command:
+         --watch db.json
+    networks:
+      - json
+
+networks:
+  json:
