@@ -2,7 +2,8 @@ version: "3.3"
 
 services:
   json:
-    image: masumonline/arm64-jsonserver:latest
+    image: williamyeh/json-server:latest # for AMD64/x86 pc
+    # image: masumonline/arm64-jsonserver:latest #for ARM64 pc
     ports:
       - "8080:3000"
     volumes:
